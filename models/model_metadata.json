@@ -1,0 +1,30 @@
+{
+  "model_name": "Random Forest",
+  "target": "Churn",
+  "decision_threshold": 0.5,
+  "positive_class": "Yes",
+  "features": [
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "tenure",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "MonthlyCharges",
+    "TotalCharges"
+  ],
+  "train_rows": 5634,
+  "test_rows": 1409,
+  "random_state": 42
+}
