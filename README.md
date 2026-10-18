@@ -1,179 +1,138 @@
-
 # Customer Intelligence & Predictive Retention Platform
 
-## Project 2 — AI Data Analytics Internship
+## AI Data Analytics Internship — Project 2
 
-## 1. Project Overview
+**Developed by:** Muthulakshmi T  
+**Project Type:** Machine Learning, Customer Analytics & Predictive Retention  
+**Programming Language:** Python
 
-The Customer Intelligence & Predictive Retention Platform is a machine learning-based analytics application designed to analyze customer behavior, predict potential customer churn, segment customers, and support customer retention strategies.
+---
 
-The project uses Python, Pandas, Scikit-learn, and Streamlit to build an interactive dashboard for customer analytics and predictive retention.
+## 1. Live Project
 
-## 2. Project Objectives
+**Live Dashboard:**  
+https://customer-intelligence-predictive-retention-3p8uxfaxovbsbteplwu.streamlit.app/
+
+**GitHub Repository:**  
+https://github.com/miniprakash2002-sudo/Customer-Intelligence-Predictive-Retention
+
+---
+
+## 2. Project Overview
+
+The Customer Intelligence & Predictive Retention Platform is an interactive data analytics application designed to analyze customer behavior, predict customer churn risk, segment customers, compare machine learning models, and generate actionable business recommendations.
+
+The project uses historical telecommunications customer data to identify customers who may discontinue their services. The dashboard helps businesses understand customer risk patterns and prioritize customer retention activities.
+
+The application is developed using Python, Pandas, NumPy, Scikit-learn, Streamlit, Plotly, and Joblib.
+
+**Important:** This project is an educational demonstration using historical data. Predictions are not guarantees of future customer behavior.
+
+---
+
+## 3. Project Objectives
 
 - Analyze historical customer data.
-- Predict customer churn using classification algorithms.
-- Compare machine learning models using evaluation metrics.
+- Identify customers with a higher predicted churn risk.
+- Build and compare machine learning classification models.
 - Segment customers using K-Means clustering.
-- Identify high-risk customers for retention prioritization.
-- Provide business-oriented retention recommendations.
-- Present insights through an interactive dashboard.
+- Visualize customer behavior and churn patterns.
+- Identify customers who may need retention attention.
+- Provide business recommendations based on analytical results.
+- Develop an interactive dashboard for customer intelligence.
 
-## 3. Dataset
+---
 
-**Dataset:** Telco Customer Churn
+## 4. Dataset Description
 
-**Source:** IBM Telco Customer Churn sample dataset, commonly distributed through public machine learning repositories.
+**Dataset Name:** IBM Telco Customer Churn Dataset
 
-**Records:** 7,043 customers  
-**Columns:** 21
+**Dataset File:** `WA_Fn-UseC_-Telco-Customer-Churn.csv`
 
-Important features include:
-- CustomerID
+The dataset contains historical telecommunications customer information.
+
+- Total customer records: 7,043
+- Total columns: 21
+- Target variable: `Churn`
+
+### Important Features
+
+- Customer ID
 - Gender
-- SeniorCitizen
-- Partner
-- Dependents
+- Senior citizen status
+- Partner and dependents
 - Tenure
-- PhoneService
-- InternetService
-- Contract
-- MonthlyCharges
-- TotalCharges
-- Churn
+- Phone service
+- Internet service
+- Contract type
+- Monthly charges
+- Total charges
+- Payment method
+- Churn status
 
-The dataset contains historical customer information and a Churn target variable.
+### Data Preparation
 
-## 4. Technologies Used
+The data preparation process includes:
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Streamlit
-- Plotly
-- Joblib
-- Pytest
+1. Loading the customer dataset.
+2. Cleaning and preparing data types.
+3. Handling missing or invalid values where required.
+4. Preparing input features for machine learning.
+5. Separating training and testing data.
+6. Preparing customer attributes for segmentation.
 
-## 5. Machine Learning Models
+---
+
+## 5. Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Application development |
+| Pandas | Data manipulation and analysis |
+| NumPy | Numerical operations |
+| Scikit-learn | Machine learning and clustering |
+| Streamlit | Interactive dashboard |
+| Plotly | Data visualization |
+| Joblib | Saving and loading trained models |
+| Pytest | Automated testing |
+| GitHub | Version control and project hosting |
+| Streamlit Community Cloud | Dashboard deployment |
+
+---
+
+## 6. Machine Learning Models
 
 The project compares the following classification models:
 
-1. Dummy Baseline
-2. Logistic Regression
-3. Decision Tree
-4. Random Forest
-5. Gradient Boosting
+### 6.1 Dummy Classifier
 
-### Evaluation Metrics
+Used as a baseline to compare the performance of other machine learning models.
+
+### 6.2 Logistic Regression
+
+A classification algorithm used to estimate the probability of customer churn.
+
+### 6.3 Decision Tree Classifier
+
+A tree-based algorithm that learns decision rules from customer data.
+
+### 6.4 Random Forest Classifier
+
+An ensemble algorithm that combines multiple decision trees to make predictions.
+
+### 6.5 Gradient Boosting Classifier
+
+An ensemble learning algorithm that builds models sequentially to improve predictive performance.
+
+### Model Evaluation Metrics
+
+The models are evaluated using:
 
 - Accuracy
 - Precision
 - Recall
 - F1-score
 - ROC-AUC
-- PR-AUC / Average Precision
+- Average Precision / PR-AUC, where available
 
-The model comparison results are saved in `reports/model_comparison.csv`.
-
-## 6. Customer Segmentation
-
-K-Means clustering is used to group customers according to selected numerical features:
-
-- Tenure
-- Monthly Charges
-- Total Charges
-
-The segmentation pipeline uses missing-value imputation and feature scaling.
-
-Generated files:
-- `models/customer_segmentation.joblib`
-- `reports/segmented_customers.csv`
-- `reports/segment_profiles.csv`
-- `reports/segmentation_model_comparison.csv`
-
-The current segmentation run produced two customer segments.
-
-## 7. Dashboard Features
-
-The Streamlit dashboard includes:
-
-- Customer analytics summary
-- Predicted customer risk distribution
-- Predicted risk by contract type
-- Customer retention priority list
-- Risk category filters
-- Customer ID search
-- Customer segmentation analysis
-- Segment exploration and CSV download
-- Machine learning model comparison
-- Individual model evaluation metrics
-
-## 8. Project Structure## 
-
-```text
-Customer_Intelligence_Project/
-├── app.py
-├── README.md
-├── WA_Fn-UseC_-Telco-Customer-Churn.csv
-├── requirements.txt
-├── models/
-│   ├── best_churn_model.joblib
-│   ├── customer_segmentation.joblib
-│   ├── model_metadata.json
-│   ├── train_model.py
-│   └── segment_customers.py
-├── reports/
-│   ├── model_comparison.csv
-│   ├── segmented_customers.csv
-│   ├── segment_profiles.csv
-│   └── segmentation_model_comparison.csv
-└── tests/
-    ├── test_project_files.py
-    └── test_model_prediction.py
-```
-
-## 9. Installation and Execution
-
-### Step 1: Create a virtual environment
-
-```powershell
-python -m venv .venv
-```
-
-### Step 2: Activate the virtual environment
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-### Step 3: Install required packages
-
-```powershell
-python -m pip install -r requirements.txt
-```
-
-### Step 4: Run the dashboard
-
-```powershell
-python -m streamlit run app.py
-```
-
-### Step 5: Run automated tests
-
-```powershell
-python -m pytest -v -p no:cacheprovider
-```
-
-
-
-
-
-
-
-
-
-
-
-
-```
+Accuracy measures overall classification correctness. Precision measures the proportion of predicted churners who actually churned. Recall measures the proportion of actual churners identified
