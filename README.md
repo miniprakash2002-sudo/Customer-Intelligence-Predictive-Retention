@@ -109,7 +109,7 @@ The Streamlit dashboard includes:
 - Machine learning model comparison
 - Individual model evaluation metrics
 
-## 8. Project Structure## 8. Project Structure
+## 8. Project Structure## 
 
 ```text
 Customer_Intelligence_Project/
@@ -164,6 +164,10 @@ python -m streamlit run app.py
 ```powershell
 python -m pytest -v -p no:cacheprovider
 ```
+
+
+
+
 
 
 
