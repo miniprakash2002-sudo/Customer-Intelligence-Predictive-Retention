@@ -134,7 +134,6 @@ The models are evaluated using:
 - F1-score
 - ROC-AUC
 - Average Precision / PR-AUC, where available
-
 Accuracy measures overall classification correctness. Precision measures the proportion of predicted churners who actually churned. Recall measures the proportion of actual churners identified by the model. F1-score balances precision and recall.
 
 ROC-AUC and Average Precision provide additional information about model ranking performance.
@@ -395,20 +394,10 @@ It demonstrates practical applications of data analytics and machine learning to
 6. Plotly Documentation — https://plotly.com/python/
 7. Pytest Documentation — https://docs.pytest.org/
 
----
-
 **Project:** Customer Intelligence & Predictive Retention Platform
 
 **Internship:** AI Data Analytics Internship — Project 2
 
 **Developed by:** Muthulakshmi T
-
-
-
-
-
-
-
-
 
 Accuracy measures overall classification correctness. Precision measures the proportion of predicted churners who actually churned. Recall measures the proportion of actual churners identified
