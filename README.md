@@ -402,4 +402,13 @@ It demonstrates practical applications of data analytics and machine learning to
 **Internship:** AI Data Analytics Internship — Project 2
 
 **Developed by:** Muthulakshmi T
+
+
+
+
+
+
+
+
+
 Accuracy measures overall classification correctness. Precision measures the proportion of predicted churners who actually churned. Recall measures the proportion of actual churners identified
