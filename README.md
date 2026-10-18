@@ -109,13 +109,14 @@ The Streamlit dashboard includes:
 - Machine learning model comparison
 - Individual model evaluation metrics
 
-## 8. Project Structure
+## 8. Project Structure## 8. Project Structure
 
 ```text
 Customer_Intelligence_Project/
 ├── app.py
 ├── README.md
 ├── WA_Fn-UseC_-Telco-Customer-Churn.csv
+├── requirements.txt
 ├── models/
 │   ├── best_churn_model.joblib
 │   ├── customer_segmentation.joblib
@@ -130,6 +131,7 @@ Customer_Intelligence_Project/
 └── tests/
     ├── test_project_files.py
     └── test_model_prediction.py
+```
 
 ## 9. Installation and Execution
 
@@ -164,5 +166,10 @@ python -m pytest -v -p no:cacheprovider
 ```
 
 
-```
 
+
+
+
+
+
+```
