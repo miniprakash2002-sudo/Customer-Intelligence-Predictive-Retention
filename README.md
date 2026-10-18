@@ -130,106 +130,39 @@ Customer_Intelligence_Project/
 └── tests/
     ├── test_project_files.py
     └── test_model_prediction.py
-```
 
 ## 9. Installation and Execution
 
-### Step 1: Create and activate a virtual environment
-
-Windows PowerShell:
+### Step 1: Create a virtual environment
 
 ```powershell
 python -m venv .venv
+```
+
+### Step 2: Activate the virtual environment
+
+```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-### Step 2: Install required packages
+### Step 3: Install required packages
 
 ```powershell
-python -m pip install pandas numpy scikit-learn streamlit plotly joblib pytest
+python -m pip install -r requirements.txt
 ```
 
-### Step 3: Run the dashboard
+### Step 4: Run the dashboard
 
 ```powershell
 python -m streamlit run app.py
 ```
 
-### Step 4: Run automated tests
+### Step 5: Run automated tests
 
 ```powershell
 python -m pytest -v -p no:cacheprovider
 ```
 
-## 10. Testing and Validation
 
-The current automated test suite contains nine tests.
+```
 
-The tests verify:
-- Dataset availability
-- Required dataset columns
-- Model comparison report availability
-- Segmentation output availability
-- Evaluation metric validity
-- Trained model loading
-- Customer churn prediction
-- Prediction probability output, when supported
-
-**Recorded test result:** 9 tests passed.
-
-These tests verify selected project files and model operations. They do not represent complete production or user-interface testing.
-
-## 11. Model Comparison Results
-
-| Model | Accuracy | Precision | Recall | F1-score |
-|---|---:|---:|---:|---:|
-| Random Forest | 75.87% | 53.28% | 73.80% | 61.88% |
-| Decision Tree | 74.10% | 50.77% | 79.14% | 61.86% |
-| Logistic Regression | 73.81% | 50.43% | 78.34% | 61.36% |
-| Gradient Boosting | 80.62% | 67.35% | 52.41% | 58.95% |
-| Dummy Baseline | 73.46% | 0.00% | 0.00% | 0.00% |
-
-Gradient Boosting achieved the highest accuracy in this recorded comparison. Random Forest achieved the highest F1-score, while Decision Tree achieved the highest recall.
-
-Model selection should consider the business objective, especially the cost of missing customers who may churn.
-
-## 12. Business Benefits
-
-- Helps prioritize customers with higher predicted churn risk.
-- Supports data-driven retention planning.
-- Provides visibility into customer segments.
-- Makes model performance easier to compare.
-- Presents analytical findings through a user-friendly dashboard.
-
-The retention recommendations in this academic project are rule-based examples, not verified interventions or guaranteed outcomes.
-
-## 13. Limitations
-
-- The dataset contains historical data, not live customer activity.
-- Predictions depend on the available features and trained model.
-- Predicted churn risk does not guarantee that a customer will leave.
-- Model performance may change with new customer populations.
-- Segments require business interpretation before operational use.
-- Production deployment would require further monitoring, validation, security, and privacy controls.
-
-## 14. Conclusion
-
-The Customer Intelligence & Predictive Retention Platform demonstrates an end-to-end analytics workflow combining data preparation, machine learning classification, model evaluation, customer segmentation, automated testing, and interactive visualization.
-
-The project provides a foundation for understanding customer churn and exploring potential retention strategies using historical data.
-
-## 15. Future Enhancements
-
-- API-based churn prediction
-- Model threshold tuning
-- Cross-validation and improved model selection
-- Explainable AI using feature importance or SHAP
-- Automated data quality checks
-- Model monitoring and retraining
-- Secure deployment with access controls
-
----
-
-**Project:** Customer Intelligence & Predictive Retention Platform  
-**Program:** AI Data Analytics Internship  
-**Application:** Python and Streamlit
